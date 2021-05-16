@@ -1,28 +1,23 @@
 package org.learing.jpa.simpleapp.model;
 
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
-public class Employee {
+
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Entity
+@Data
+public class Employee implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false, updatable = false)
     private Long id;
     private String name;
     private String email;
     private String imageUrl;
     private String position;
+    @Column(nullable = false, updatable = false)
     private String employeeId;
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", Name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", imageUrl='" + imageUrl + '\'' +
-                ", position='" + position + '\'' +
-                ", employeeId='" + employeeId + '\'' +
-                '}';
-    }
 }
