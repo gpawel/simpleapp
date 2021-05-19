@@ -1,5 +1,6 @@
 package org.learing.jpa.simpleapp.service;
 
+import org.learing.jpa.simpleapp.exceptions.EmployeeNotFoundException;
 import org.learing.jpa.simpleapp.model.Employee;
 import org.learing.jpa.simpleapp.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,7 @@ public class EmployeeService {
     }
 
     public void deleteEmployeeById(Long id) {
-        employeeRepository.deleteById(id);
+        employeeRepository.deleteEmployeeById(id);
     }
 
     public void deleteEmployee(Employee employee) {
@@ -36,9 +37,7 @@ public class EmployeeService {
     }
 
     public Employee findEmployeeById(Long id) {
-        Optional<Employee> emp = employeeRepository.findById(id);
-        if (emp.isPresent()) return emp.get();
-        throw new RuntimeException("Unable to find an employee by id: "+id);
+        return employeeRepository.findEmployeeById(id).orElseThrow(()->new EmployeeNotFoundException("User with id: "+id+" not found"));
     }
 
     public List<Employee> findAll() {
