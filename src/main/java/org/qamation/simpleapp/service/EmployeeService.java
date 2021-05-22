@@ -1,13 +1,12 @@
-package org.learing.jpa.simpleapp.service;
+package org.qamation.simpleapp.service;
 
-import org.learing.jpa.simpleapp.exceptions.EmployeeNotFoundException;
-import org.learing.jpa.simpleapp.model.Employee;
-import org.learing.jpa.simpleapp.repository.EmployeeRepository;
+import org.qamation.simpleapp.exceptions.EmployeeNotFoundException;
+import org.qamation.simpleapp.model.Employee;
+import org.qamation.simpleapp.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 @Service

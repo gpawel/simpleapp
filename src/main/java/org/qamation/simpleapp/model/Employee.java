@@ -1,4 +1,4 @@
-package org.learing.jpa.simpleapp.model;
+package org.qamation.simpleapp.model;
 
 
 import lombok.Data;

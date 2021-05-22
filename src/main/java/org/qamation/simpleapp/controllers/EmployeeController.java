@@ -1,12 +1,11 @@
-package org.learing.jpa.simpleapp.controllers;
+package org.qamation.simpleapp.controllers;
 
-import org.learing.jpa.simpleapp.model.Employee;
-import org.learing.jpa.simpleapp.service.EmployeeService;
+import org.qamation.simpleapp.model.Employee;
+import org.qamation.simpleapp.service.EmployeeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RestController
