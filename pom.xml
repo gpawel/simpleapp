@@ -8,7 +8,7 @@
 		<version>2.4.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>org.learing.jpa</groupId>
+	<groupId>org.qamation</groupId>
 	<artifactId>simpleapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>simpleapp</name>
