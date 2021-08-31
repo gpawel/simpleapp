@@ -23,6 +23,13 @@ public class EmployeeService {
         return employeeRepository.save(employee);
     }
 
+    public List<Employee> addEmployees(List<Employee> employees) {
+        for (Employee empl: employees) {
+            addEmployee(empl);
+        }
+        return employees;
+    }
+
     public void deleteEmployeeById(Long id) {
         employeeRepository.deleteEmployeeById(id);
     }
